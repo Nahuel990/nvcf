@@ -42,6 +42,7 @@ helm template nvca-operator "${repo_root}/nvca-operator" \
   --namespace nvca-operator \
   --values "${repo_root}/nvca-operator/values.yaml" \
   --values "${repo_root}/values.release-sbom.yaml" \
+  --set-string ngcConfig.clusterSource=self-managed \
   --set-string selfManaged.icmsServiceURL=http://sis.example.invalid:8080 \
   --set-string selfManaged.icmsServiceHostHeaderOverride=sis.gateway.example.invalid \
   --set-string selfManaged.revalServiceURL=http://reval.example.invalid:8080 \
@@ -54,6 +55,7 @@ helm template nvca-operator "${repo_root}/nvca-operator" \
   --namespace nvca-operator \
   --values "${repo_root}/nvca-operator/values.yaml" \
   --values "${repo_root}/values.release-sbom.yaml" \
+  --set-string ngcConfig.clusterSource=self-managed \
   --set-string nvcaImage.repositoryOverride= \
   --set-string selfManaged.icmsServiceURL=http://sis.example.invalid:8080 \
   --set-string selfManaged.icmsServiceHostHeaderOverride=sis.gateway.example.invalid \
@@ -67,6 +69,7 @@ helm template nvca-operator "${repo_root}/nvca-operator" \
   --namespace nvca-operator \
   --values "${repo_root}/nvca-operator/values.yaml" \
   --values "${repo_root}/values.release-sbom.yaml" \
+  --set-string ngcConfig.clusterSource=self-managed \
   --set-string selfManaged.icmsServiceURL=http://sis.example.invalid:8080 \
   --set-string selfManaged.revalServiceURL=http://reval.example.invalid:8080 \
   --set-string selfManaged.natsURL=nats://nats.example.invalid:4222 \
